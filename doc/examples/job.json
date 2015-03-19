@@ -1,0 +1,27 @@
+{
+    "mode": "default", // default oder sample
+    "size": {
+        "cols": 4,
+        "rows": 2,
+        "rotation": 0,
+        "width": 105,
+        "height": 148
+    },
+    "sheet": {
+        "width": 460,
+        "height": 320
+    },
+    "border": 2,
+    "outfile": "/home/foo/bar/job-foo-bar.pdf",
+    "cards": [{ // Only the first child is used when in default mode
+        "front": "/home/foo/bar/card-1-f.pdf",
+        "back": "/home/foo/bar/card-1-b.pdf",
+        "barcode": { // Only used in sample mode
+            "x": 260,
+            "y": 420,
+            "height": 30,
+            "width": 150,
+            "value": 123456789
+        }
+    }]
+}

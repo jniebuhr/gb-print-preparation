@@ -1,0 +1,111 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "id": "http://www.goldbek-solutions.de/print",
+    "type": "object",
+    "properties": {
+        "mode": {
+            "id": "http://www.goldbek-solutions.de/print/mode",
+            "type": "string"
+        },
+        "size": {
+            "id": "http://www.goldbek-solutions.de/print/size",
+            "type": "object",
+            "properties": {
+                "cols": {
+                    "id": "http://www.goldbek-solutions.de/print/size/cols",
+                    "type": "integer"
+                },
+                "rows": {
+                    "id": "http://www.goldbek-solutions.de/print/size/rows",
+                    "type": "integer"
+                },
+                "rotation": {
+                    "id": "http://www.goldbek-solutions.de/print/size/rotation",
+                    "type": "integer"
+                },
+                "width": {
+                    "id": "http://www.goldbek-solutions.de/print/size/width",
+                    "type": "integer"
+                },
+                "height": {
+                    "id": "http://www.goldbek-solutions.de/print/size/height",
+                    "type": "integer"
+                }
+            }
+        },
+        "sheet": {
+            "id": "http://www.goldbek-solutions.de/print/sheet",
+            "type": "object",
+            "properties": {
+                "width": {
+                    "id": "http://www.goldbek-solutions.de/print/sheet/width",
+                    "type": "integer"
+                },
+                "height": {
+                    "id": "http://www.goldbek-solutions.de/print/sheet/height",
+                    "type": "integer"
+                }
+            }
+        },
+        "border": {
+            "id": "http://www.goldbek-solutions.de/print/border",
+            "type": "integer"
+        },
+        "outfile": {
+            "id": "http://www.goldbek-solutions.de/print/outfile",
+            "type": "string"
+        },
+        "cards": {
+            "id": "http://www.goldbek-solutions.de/print/cards",
+            "type": "array",
+            "items": {
+                "id": "http://www.goldbek-solutions.de/print/cards/item",
+                "type": "object",
+                "properties": {
+                    "front": {
+                        "id": "http://www.goldbek-solutions.de/print/cards/item/front",
+                        "type": "string"
+                    },
+                    "back": {
+                        "id": "http://www.goldbek-solutions.de/print/cards/item/back",
+                        "type": "string"
+                    },
+                    "barcode": {
+                        "id": "http://www.goldbek-solutions.de/print/cards/item/barcode",
+                        "type": "object",
+                        "properties": {
+                            "x": {
+                                "id": "http://www.goldbek-solutions.de/print/cards/item/barcode/x",
+                                "type": "integer"
+                            },
+                            "y": {
+                                "id": "http://www.goldbek-solutions.de/print/cards/item/barcode/y",
+                                "type": "integer"
+                            },
+                            "height": {
+                                "id": "http://www.goldbek-solutions.de/print/cards/item/barcode/height",
+                                "type": "integer"
+                            },
+                            "width": {
+                                "id": "http://www.goldbek-solutions.de/print/cards/item/barcode/width",
+                                "type": "integer"
+                            },
+                            "value": {
+                                "id": "http://www.goldbek-solutions.de/print/cards/item/barcode/value",
+                                "type": "integer"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "required": [
+        "mode",
+        "size",
+        "sheet",
+        "border",
+        "outfile",
+        "cards"
+    ]
+}

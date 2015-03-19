@@ -1,0 +1,7 @@
+/vendor/
+/puphpet/
+/Vagrantfile
+/.vagrant/
+/.idea/
+/*.iml
+.DS_Store
